@@ -16,14 +16,6 @@
 # 5 10 15 20 25 30
 # 6 12 18 24 30 36
 
-# num_rows = int(input("Input count of rows : "))
-# my_list = []
-# for i in range(2, num_rows + 1):
-#     my_list.append(i)
-# print(my_list, sep="\n")
-# my_list = list(map(lambda x: x+2, my_list))
-# print(my_list)
-
 num_rows = int(input("Input 1st number of table : "))
 num_columns = int(input("Input 2nd number of table : "))
 
