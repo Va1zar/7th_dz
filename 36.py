@@ -15,3 +15,28 @@
 # 4 8 12 16 20 24
 # 5 10 15 20 25 30
 # 6 12 18 24 30 36
+
+# num_rows = int(input("Input count of rows : "))
+# my_list = []
+# for i in range(2, num_rows + 1):
+#     my_list.append(i)
+# print(my_list, sep="\n")
+# my_list = list(map(lambda x: x+2, my_list))
+# print(my_list)
+
+num_rows = int(input("Input 1st number of table : "))
+num_columns = int(input("Input 2nd number of table : "))
+
+
+def printOperationTable(operation, num_rows=9, num_columns=9):
+    if operation(1, 1) == 2:
+        print(1, end='\t')
+    for row in range(1, num_rows+1):
+        for column in range(1, num_columns+1):
+            if operation(1, 1) == 2:
+                column = column-1
+            print(operation(row, column), end='\t')
+        print()
+
+
+print(printOperationTable(lambda x, y: x*y, num_rows, num_columns))
